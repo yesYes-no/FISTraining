@@ -253,6 +253,7 @@ public class ElectronicDeviceDAOImplementation implements IElectronicDeviceDAO  
 	public List<ElectronicDevices> getDeviceBasedOnPriceRangeAndType(
 			int range1, int range2, String type,List<ElectronicDevices> list) {
 		List<ElectronicDevices> el = new ArrayList<>();
+		el = list;
 		el = el.stream().filter(device ->{
 			return (device.getCost()>range1 && device.getCost()<=range2) && (device.getDeviceType().equals(type));
 		}).collect(Collectors.toList());

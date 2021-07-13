@@ -24,6 +24,7 @@ public class TestRunner {
 			elist.add(ed2);
 			elist.add(ed3);
 			elist.add(ed4);
+			//System.out.println(elist);
 			
 			IElectronicDeviceDAO dao = new ElectronicDeviceDAOImplementation();
 			
@@ -42,7 +43,7 @@ public class TestRunner {
 			System.out.println("Count "+count);*/
 			/*int sum = dao.getSumofPriceBasedOnType("computer");
 			System.out.println("sum "+sum);*/
-			List<ElectronicDevices> list = dao.getDeviceBasedOnPriceRangeAndType(1000, 5000, "computer", elist);
+			List<ElectronicDevices> list = dao.getDeviceBasedOnPriceRangeAndType(1000, 3000, "computer", elist);
 			System.out.println(list);
 			
 			
